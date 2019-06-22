@@ -1,7 +1,5 @@
 package com.kurio.daggerguide.model;
 
-import android.util.Log;
-
 import javax.inject.Inject;
 
 public class Car {
@@ -14,7 +12,12 @@ public class Car {
         this.wheel = wheel;
     }
 
-    public void drive() {
-        System.out.println("Car is driving");
+    @Inject
+    public void openCarLock(Remote remote) {
+        remote.openCarLock(this);
+    }
+
+    public String drive() {
+        return "Car is driving";
     }
 }

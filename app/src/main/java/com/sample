@@ -1,7 +1,2 @@
-Implement 3 dependencies for dagger and make rebuild project
-Create 3 class ( Car, Engine , Wheel ) and make inject
-Crete AppComponent Interface
-Create MyApplicationModule to inject Activity
-Add Module to AppComponent
-Create App that extends Application and Create DaggerAppComponent
-Inject Dagger at MainActivity
+Create Remote Class
+Inject Method at Car Class
