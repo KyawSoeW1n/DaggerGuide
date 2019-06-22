@@ -11,7 +11,7 @@ import dagger.Component;
 import dagger.android.AndroidInjectionModule;
 import dagger.android.AndroidInjector;
 
-@Component(modules = {AndroidInjectionModule.class, MyApplicationModule.class})
+@Component(modules = {AndroidInjectionModule.class, MyApplicationModule.class, WheelModule.class})
 public interface AppComponent extends AndroidInjector<App> {
 
     void inject(App app);
