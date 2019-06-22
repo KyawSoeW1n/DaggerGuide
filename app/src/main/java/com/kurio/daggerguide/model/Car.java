@@ -1,5 +1,7 @@
 package com.kurio.daggerguide.model;
 
+import com.kurio.daggerguide.repo.Engine;
+
 import javax.inject.Inject;
 
 public class Car {
@@ -18,6 +20,7 @@ public class Car {
     }
 
     public String drive() {
+        engine.start();
         return "Car is driving";
     }
 }
