@@ -11,15 +11,18 @@ import dagger.Component;
 import dagger.android.AndroidInjectionModule;
 import dagger.android.AndroidInjector;
 
-@Component(modules = { AndroidInjectionModule.class, MyApplicationModule.class})
+@Component(modules = {AndroidInjectionModule.class, MyApplicationModule.class})
 public interface AppComponent extends AndroidInjector<App> {
+
+    void inject(App app);
+
 
     @Component.Builder
     interface Builder {
         @BindsInstance
-        public Builder application(Application application);
+        Builder application(Application application);
 
-        public AppComponent build();
+        AppComponent build();
     }
 
     void inject(MainActivity mainActivity);
