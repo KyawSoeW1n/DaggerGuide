@@ -1,5 +1,5 @@
-Declear  Builder diselEngineModule(DieselEngineModule dieselEngineModule); in AppComponent
-Remove Inject to Constructor at DieselEngineModule change Constructor type
-Remove Inject to Constructor at DieselEngine and change Constructor type
-And rebuild
-and pass value from App class by adding .diselEngineModule(new DieselEngineModule(100))
+Change Module from Diesel To Petrol
+Create Class is called PetrolEngineModule
+If you don't declare @Name ,it will be exception call multiple times.
+
+

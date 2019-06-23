@@ -15,8 +15,14 @@ public class DieselEngineModule {
         this.horsePower = horsePower;
     }
 
+
     @Provides
-    Engine provideEngine() {
-        return new DieselEngine(horsePower);
+    int provideHorsePower() {
+        return horsePower;
+    }
+
+    @Provides
+    Engine provideEngine(DieselEngine engine) {
+        return engine;
     }
 }

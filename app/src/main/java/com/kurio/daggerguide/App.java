@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 
 import com.kurio.daggerguide.di.DaggerAppComponent;
-import com.kurio.daggerguide.di.DieselEngineModule;
+import com.kurio.daggerguide.di.PetrolEngineModule;
 
 import javax.inject.Inject;
 
@@ -21,7 +21,7 @@ public class App extends Application implements HasActivityInjector {
         super.onCreate();
         DaggerAppComponent.builder()
                 .application(this)
-                .diselEngineModule(new DieselEngineModule(100))
+                .diselEngineModule(new PetrolEngineModule(100, 900))
                 .build()
                 .inject(this);
     }
