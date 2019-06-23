@@ -5,7 +5,6 @@ import android.app.Application;
 
 import com.kurio.daggerguide.App;
 import com.kurio.daggerguide.activity.MainActivity;
-import com.kurio.daggerguide.model.DieselEngine;
 
 import dagger.BindsInstance;
 import dagger.Component;
@@ -17,11 +16,12 @@ public interface AppComponent extends AndroidInjector<App> {
 
     void inject(App app);
 
-
     @Component.Builder
     interface Builder {
         @BindsInstance
         Builder application(Application application);
+
+        Builder diselEngineModule(DieselEngineModule dieselEngineModule);
 
         AppComponent build();
     }

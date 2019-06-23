@@ -1,2 +1,5 @@
-Create Remote Class
-Inject Method at Car Class
+Declear  Builder diselEngineModule(DieselEngineModule dieselEngineModule); in AppComponent
+Remove Inject to Constructor at DieselEngineModule change Constructor type
+Remove Inject to Constructor at DieselEngine and change Constructor type
+And rebuild
+and pass value from App class by adding .diselEngineModule(new DieselEngineModule(100))
