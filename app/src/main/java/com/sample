@@ -1,5 +1,6 @@
-Change Module from Diesel To Petrol
-Create Class is called PetrolEngineModule
-If you don't declare @Name ,it will be exception call multiple times.
+Singleton use for only one instance create
+Eg We use retrofit,but we don't wanna create every class
+Then we will use singleton.
+
 
 

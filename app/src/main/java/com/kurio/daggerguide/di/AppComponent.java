@@ -6,11 +6,14 @@ import android.app.Application;
 import com.kurio.daggerguide.App;
 import com.kurio.daggerguide.activity.MainActivity;
 
+import javax.inject.Singleton;
+
 import dagger.BindsInstance;
 import dagger.Component;
 import dagger.android.AndroidInjectionModule;
 import dagger.android.AndroidInjector;
 
+@Singleton
 @Component(modules = {AndroidInjectionModule.class, MyApplicationModule.class, WheelModule.class, PetrolEngineModule.class})
 public interface AppComponent extends AndroidInjector<App> {
 

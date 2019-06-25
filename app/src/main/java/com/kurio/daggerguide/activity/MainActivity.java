@@ -13,7 +13,7 @@ import dagger.android.AndroidInjection;
 
 public class MainActivity extends AppCompatActivity {
     @Inject
-    public Car car;
+    public Car car1, car2;
     TextView tv1;
 
     @Override
@@ -22,6 +22,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         AndroidInjection.inject(this);
         tv1 = findViewById(R.id.tv1);
-        tv1.setText(car.drive());
+        tv1.setText(car1.drive() + "\n" + car2.drive());
     }
 }

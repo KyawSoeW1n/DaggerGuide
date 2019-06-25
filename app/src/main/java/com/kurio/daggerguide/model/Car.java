@@ -5,11 +5,13 @@ import com.kurio.daggerguide.repo.Engine;
 import javax.inject.Inject;
 
 public class Car {
+    private Driver driver;
     private Engine engine;
     private Wheel wheel;
 
     @Inject
-    public Car(Engine engine, Wheel wheel) {
+    public Car(Driver driver, Engine engine, Wheel wheel) {
+        this.driver = driver;
         this.engine = engine;
         this.wheel = wheel;
     }
@@ -21,6 +23,6 @@ public class Car {
 
     public String drive() {
         engine.start();
-        return "Car is driving";
+        return driver + "is driving" + this;
     }
 }
