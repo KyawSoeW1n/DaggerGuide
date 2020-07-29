@@ -14,7 +14,7 @@ public class Car {
         this.wheel = wheel;
     }
 
-    public void drive() {
-        System.out.println("Car is driving");
+    public String driveCar() {
+        return "Car is driving";
     }
 }

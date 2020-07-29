@@ -1,17 +1,15 @@
 package com.kurio.daggerguide.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
 import com.kurio.daggerguide.R;
-import com.kurio.daggerguide.di.AppComponent;
 import com.kurio.daggerguide.model.Car;
 
 import javax.inject.Inject;
 
 import dagger.android.AndroidInjection;
-import dagger.android.DaggerActivity;
-import dagger.android.DaggerApplication;
 
 public class MainActivity extends AppCompatActivity {
     @Inject
@@ -22,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         AndroidInjection.inject(this);
-        car.drive();
+        TextView tvHello = findViewById(R.id.tvHello);
+        tvHello.setText(car.driveCar());
     }
 }
